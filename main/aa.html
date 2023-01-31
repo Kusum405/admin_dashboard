@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <span class="user-detail">
+      <img src="./resources/uploads/officer.jpg" alt="alternative text" height="35px" width="35px" class="user-image">
+      <h6 class="user-name">KBC</h6>
+    </span>
+
+    <button class="navbar-toggler" type="button" onclick=toggleNav()>
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    
+  </div>
+  <div class="sidebar">
+    <a  href="main.html"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+    <div class="dropdown">
+      <a href="#" class="dropdown-toggle"><i class="fa-solid fa-gauge"></i>Actions <i class="fa fa-caret-down"></i></a>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#" class="dropdown-toggle"><i class="fa-solid fa-gauge"></i>Rules <i class="fa fa-caret-down"></i></a>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <a href="form.html"><i class="fa-sharp fa-solid fa-bars"></i>Form</a>
+    <a href="#"><i class="fa-solid fa-user"></i>Contact</a>
+    <a href="#"><i class="fa-sharp fa-solid fa-bars"></i>About</a>
+
+  </div>
+  <div class="main">
+   
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <p>Copyright &copy; 2023</p>
+    </div>
+  </footer>
+</body>
+
+</html>
+<script>
+  function toggleNav() {
+    $('.sidebar').toggleClass('active');
+    if ($('.sidebar').hasClass('active')) {
+      $('.sidebar').css('width', '0');
+      $('.main').css('margin-left', '40px');
+    } else {
+      $('.sidebar').css('width', '200px');
+      $('.main').css('margin-left', '214px');
+    }
+  }
+</script>
+
+<script>
+  $('.dropdown-toggle').click(function () {
+    $(this).next('.dropdown-content').toggle();
+  });
+</script>
+
+:root {
+    --first-color: #012970;
+    --pink-color: #ff3a6e;
+    --green-color: #6fd943;
+    --red-color: #a52a2a;
+    --orange-color: #f39341;
+    --first-color-alt: #9ceaf7;
+    --white-color: #e2fafd;
+    --full-white: white;
+    --full-black: black;
+    --secondary-color: #d0d4d8;
+    --grey-color: #5e5e5e;
+    --delete-color: #f70039;
+    --tab-color: #f5f5f5;
+  
+  }
+  
+  
+  .navbar {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(161, 137, 137, 0.1) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 67px;
+  }
+  
+  .user-image {
+    border-radius: 50%;
+  }
+  
+  .user-detail {
+    float: right;
+    display: flex;
+    padding-right: 113px;
+    padding-top: 18px;
+  }
+  
+  .user-name {
+    margin-top: 9px;
+    padding-left: 15px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .navbar-toggler {
+    float: left !important;
+    margin-top: 17px;
+    margin-left: 77px;
+    border: none;
+    background-color: white;
+    color: var(--red-color);
+  }
+  
+  .navbar-toggler i {
+    font-size: 25px;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: -1;
+    top: 67px;
+    left: 0;
+    background-color: white;
+    overflow-x: auto;
+    padding-top: 16px;
+    transition: 0.5s;
+    box-shadow: 0 0px 10px 0 rgba(1, 41, 112, 0.1) !important;
+  }
+  
+  .sidebar a {
+    padding: 13px 8px 15px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--first-color);
+    display: block;
+    font-weight: 600;
+  }
+  
+  .sidebar a i {
+    padding-right: 10px;
+    color: var(--red-color);
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  .sidebar a:hover {
+    background-color: var(--white-color) !important;
+  }
+  
+  .toplink {
+    padding-top: 10px !important;
+  }
+  
+  .main {
+    margin-left: 214px;
+    transition: 0.5s;
+    margin-top: 88px;
+  }
+  
+  .fa-caret-down {
+    margin-left: 30px;
+  }
+  
+  .dropdown-content {
+    margin-left: 38px;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    text-align: center;
+    padding: 10px;
+    z-index: -2;
+  }
+  
+  @media (max-width: 600px) {
+  
+    .navbar a,
+    .main,
+    .sidebar {
+      display: block;
+    }
+  
+    .navbar-toggler {
+      display: block;
+      float: right;
+      margin-right: 15px;
+    }
+  
+    .main {
+      margin-left: 0;
+    }
+  }
+  
+  
+  /* -------------------Forms---------------------------- */
+  
+  form {
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
