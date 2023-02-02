@@ -93,7 +93,7 @@ h2 {
   align-items: center;
   justify-content: space-around;
   padding: 13px 10px;
-  border-bottom: 2px solid #999;
+  border-bottom: 1px solid #999;
 }
 
 .dash-table {
@@ -137,6 +137,7 @@ h2 {
   display: flex;
   flex-direction: column;
   box-shadow: 0 0px 10px 0 rgba(1, 41, 112, 0.1) !important;
+  z-index: 2;
 }
 
 .side-menu .brand-name {
@@ -173,7 +174,7 @@ h2 {
 }
 
 .dropdown-content {
-  margin-left: 38px;
+  padding-left: 38px;
   display: grid;
   font-size: 13px;
 }
@@ -183,13 +184,13 @@ h2 {
 }
 
 .dropdown-arrow {
-  padding-left: 57px;
+  padding-left: 10px;
 }
 
 .container {
   position: absolute;
   right: 0;
-  width: 83vw;
+  width: 82vw;
   height: 100vh;
 }
 
@@ -201,8 +202,9 @@ h2 {
   height: 11vh;
   background: white;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -210,12 +212,15 @@ h2 {
 .container .header .nav {
   width: 90%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 }
 
 .container .header .nav .search {
   flex: 3;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -263,6 +268,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .container .header .nav .user img {
@@ -288,6 +294,7 @@ h2 {
   position: relative;
   margin-top: 10vh;
   min-height: 90vh;
+  z-index: -2;
 }
 
 .container .content .cards {
@@ -349,6 +356,202 @@ h2 {
   width: 40px;
 }
 
+/* --------------------------------Form-------------------------------------------- */
+.container .form-content {
+  position: relative;
+  margin-top: 10vh;
+  min-height: 90vh;
+  background: var(--secondary-color);
+  padding-top: 28px;
+  padding-left: 25px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.form-heading {
+  color: var(--first-color);
+}
+
+.form-content form {
+  margin-top: 10px;
+  padding: 18px;
+  background-color: var(--full-white);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(254px, 1fr));
+  grid-gap: 1rem;
+  font-size: 12px;
+}
+
+.form-content form label {
+  display: block;
+
+}
+
+.form-content p {
+  margin: 0;
+
+}
+
+.form-content .message,
+.submit-btn {
+  grid-column: 1/2;
+
+}
+
+.form-content button,
+.form-content input,
+.form-content select,
+.form-content textarea {
+  margin-top: 7px;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid var(--first-color-alt);
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.form-content button:hover,
+.form-content button:focus {
+  background-color: var(--red-color);
+  color: var(--full-white);
+  outline: 0;
+  transition: background-color 2s ease-out;
+}
+.select2-container--default .select2-selection--multiple {
+  margin-top: 7px !important;
+  width: 100% !important;
+  /* padding: 0.5em !important; */
+  border: 1px solid var(--first-color-alt) !important;
+  font-size: 12px !important;
+  border-radius: 4px !important;
+  height: 3px !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: var(--first-color-alt) !important; 
+  border: 1px solid var(--first-color-alt) !important;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding-right: 7px !important;
+  padding-left: 3px !important;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid #aaa;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: var(--delete-color) !important;
+    cursor: pointer;
+    font-size: 1.2em !important;
+    font-weight: bold;
+    padding: 0px 11px;
+    position: absolute;
+    left: 31px !important;
+    top: -7px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    cursor: default;
+    padding-left: 4px !important;
+    padding-right: 8px !important;
+    font-size: 10px !important;
+}
+/* .select2-container--default .select2-results__option--selected {
+  background-color: var(--full-white) !important;
+} */
+.select2-container--open .select2-dropdown--below {
+  border-top: 1px solid #aaa !important;
+}
+.select2-container--default .select2-results>.select2-results__options {
+  font-size: 10px !important;
+}
+/* ----------------------------------Lists---------------------------------------- */
+
+.container .table-content {
+  position: relative;
+  margin-top: 10vh;
+  min-height: 90vh;
+  background: var(--secondary-color);
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  z-index: -2;
+
+}
+
+.list-title {
+  color: var(--first-color);
+  padding-bottom: 19px;
+}
+
+.table-content .table-list {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--full-white);
+  box-shadow: 0 4px 8px 0 rgb(233 218 218 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.table-list th {
+  font-size: 13px;
+  text-align: left;
+  background-color: var(--full-white);
+  padding: 8px;
+}
+
+.table-list td {
+  font-size: 12px;
+  padding: 8px;
+}
+
+.table-list tr:nth-child(odd) {
+  background-color: var(--tab-color)
+}
+
+.pagination {
+  display: inline-block;
+  padding-top: 15px;
+}
+
+.pagination a {
+  color: var(--first-color);
+  padding: 1px 10px;
+  float: left;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: var(--first-color) !important;
+  color: var(--full-white);
+  border-radius: 3px;
+}
+
+.pagination a:hover{
+  background-color: var(--grey-color) !important;
+  color: var(--full-white);
+  border-radius: 3px;
+}
+
+.fa-angles-left {
+  font-size: 12px;
+}
+
+.fa-angles-right {
+  font-size: 12px;
+}
+
+/* ------------------------------RESPONSIVE MEDIA QUERY-------------------------------------------- */
 @media screen and (max-width: 1050px) {
   .side-menu li {
     font-size: 18px;
@@ -364,28 +567,31 @@ h2 {
     align-items: center;
   }
 
-  .side-menu li img {
+  .side-menu li i {
+    float: left;
     width: 40px;
     height: 40px;
   }
 
   .side-menu li:hover {
-    background: var(--red-color);
+    background: var(--white-color);
     padding: 8px 38px;
     border: 2px solid white;
   }
 }
 
 @media screen and (max-width:536px) {
-  .brand-name h1 {
-    font-size: 16px;
+  .side-menu .brand-name {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 24px;
   }
 
   .container .content .cards {
     justify-content: center;
   }
 
-  .side-menu li img {
+  .side-menu li i {
     width: 30px;
     height: 30px;
   }
@@ -394,105 +600,80 @@ h2 {
   .container .content .content-2 .recent-payments table td:nth-child(2) {
     display: none;
   }
+
+  .container .header .nav .search {
+    margin-top: -2px;
+  }
+
+  .container .header .nav .search input[type=text] {
+    height: 32px;
+    width: 32%;
+    margin-left: -102px;
+    font-size: 10px;
+  }
+
+  .container .header .nav .search button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .add-new-btn {
+    margin-left: -87px;
+    margin-top: 1px;
+  }
+
+  .notification {
+    margin-left: 6px;
+    font-size: 18px;
+  }
 }
 
-
-/* --------------------------------Form-------------------------------------------- */
-.container .form-content {
-  position: relative;
-  margin-top: 10vh;
-  min-height: 90vh;
-  background: var(--secondary-color);
-  padding-top: 28px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-right: 20px;
-}
-
-.form-heading {
-  color: var(--first-color);
-}
-
-.form-content form {
-  margin-top: 10px;
-  padding: 18px;
-  background-color: var(--full-white);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap:10px;
-  font-size: 12px;
-}
-
-.form-content form label {
-  display: block;
-
-}
-
-.form-content p {
-  margin: 0;
-
-}
-
-.form-content .message, .submit-btn  {
-  grid-column: 1/2;
-
-}
-
-.form-content button, .form-content input, .form-content textarea{
-  margin-top: 7px;
-width: 100%;
-padding: 0.5em;
-border: 1px solid var(--first-color-alt);
-font-size: 12px;
-border-radius: 4px;
-}
-
-.form-content button:hover,.form-content button:focus{
-background-color: var(--red-color);
-color: var(--full-white);
-outline: 0;
-transition: background-color 2s ease-out;
-}
-
-
-/* ----------------------------------Lists---------------------------------------- */
-
-.table-content{
-  position: relative;
-  margin-top: 10vh;
-  min-height: 90vh;
-  background: var(--secondary-color);
-  padding-top: 28px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-right: 20px;
+@media (min-width:357px) and (max-width:700px) {
+  .add-new-btn {
+    margin-left: -83px;
+  }
+  .container .header .nav .search input[type=text] {
+    width: 35%;
+    margin-left: -121px;
+  }
+  .side-menu .brand-name {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
 
 }
 
-.list-title{
-  color: var(--first-color);
-  padding-bottom: 19px;
-}
-.table-content .table-list{
-  width: 100%;
- border-collapse: collapse;
- background-color: var(--full-white);
- box-shadow:0 4px 8px 0 rgb(233 218 218 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+@media (min-width:701px) and (max-width:940px) {
+  .side-menu .brand-name {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
 }
 
-.table-list th{
-  font-size: 13px;
-  text-align: left;
-  background-color: var(--tab-color);
-  padding:8px;
+
+@media (min-width: 357px) and (max-width: 437px){
+.container .header .nav .search input[type=text] {
+    width: 30%;
+    margin-left: -87px;
+}
+.side-menu .brand-name {
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 14px;
+}
 }
 
-.table-list td
-{
-  font-size: 12px;
-  padding: 8px;
+@media (min-width: 438px) and (max-width: 567px){
+  .side-menu .brand-name {
+    padding-left: 7px;
+    padding-right: 7px;
+}
 }
 
-.table-list tr:nth-child(odd){
-  background-color: var(--white-color)
+
+@media (min-width: 545px) and (max-width: 635px){
+.container .content .cards {
+  padding: 20px 96px;
+}
 }

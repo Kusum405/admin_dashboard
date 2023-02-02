@@ -10,7 +10,10 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 </head>
 
 <body>
@@ -19,18 +22,20 @@
             <h5>Brand</h5>
         </div>
         <ul class="sidebar-links">
-            <li><a  href="main.html"><i class="fa-solid fa-gauge"></i><span>Dashboard</span></a></li>
-            <li><div class="dropdown">
-              <span class="dropdown-toggle"><i class="fa-solid fa-plus"></i>Setups <i class="fa fa-caret-down dropdown-arrow"></i></span>
-              <div class="dropdown-content">
-                <a href="form.html">Create</a>
-                <a href="list.html">List</a>
-              </div>
-            </div>
+            <li><a href="main.html"><i class="fa-solid fa-gauge"></i><span>Dashboard</span></a></li>
+            <li>
+                <div class="dropdown">
+                    <span class="dropdown-toggle"><i class="fa-solid fa-plus"></i>Setups <i
+                            class="fa fa-caret-down dropdown-arrow"></i></span>
+                    <div class="dropdown-content">
+                        <a href="form.html">Create</a>
+                        <a href="list.html">List</a>
+                    </div>
+                </div>
             </li>
-            <li><i class="fa-solid fa-gauge"></i><span>Teachers</span> </li>
-            <li><i class="fa-solid fa-gauge"></i><span>Schools</span> </li>
-            <li><i class="fa-solid fa-gauge"></i><span>Income</span> </li>
+            <li><i class="fa-sharp fa-solid fa-users"></i><span>Clients</span> </li>
+            <li><i class="fa-solid fa-users"></i><span>Users</span> </li>
+            <li><i class="fa-solid fa-money-check-dollar"></i><span>Income</span> </li>
             <li><i class="fa-regular fa-circle-question"></i><span>Help</span></li>
             <li><i class="fa-solid fa-gear"></i><span>Settings</span> </li>
         </ul>
@@ -46,78 +51,106 @@
                     <a href="#" class="add-new-btn">Add New <i class="fa-solid fa-plus"></i></a>
                     <i class="fa-sharp fa-solid fa-bell notification"></i>
                     <div class="img-case">
-                      <img class="user-image" src="./resources/uploads/officer.jpg" alt="">
+                        <img class="user-image" src="./resources/uploads/officer.jpg" alt="">
                     </div>
                 </div>
             </div>
         </div>
         <div class="form-content">
-          <h3 class="form-heading">
-            Create Form
-          </h3>
-          <form class="create-form">
-            <p>
-                <label>First Name</label>
-                <input type="text" name="first_name" value="">
-            </p>
-            <p>
-                <label>Last Name</label>
-                <input type="text" name="last_name" value="">
-            </p>
-            <p>
-                <label>Email Address</label>
-                <input type="email" name="email_address" value="">
-            </p>
-            <p>
-                <label>Telephone Number</label>
-                <input type="number" name="telephone_number" value="">
-            </p>
-            <p>
-                <label>Mobile Number</label>
-                <input type="number" name="mobile_number" value="">
-            </p>
-            <p>
-                <label>Address</label>
-                <input type="text" name="address" value="">
-            </p>
-            <p>
-                <label>Ward No</label>
-                <input type="number" name="ward-no" value="">
-            </p>
-            <p>
-                <label>Tole</label>
-                <input type="text" name="tole" value="">
-            </p>
-            <p>
-                <label>Date Of birth</label>
-                <input type="date" name="date-of-birth" value="">
-            </p>
-            <p>
-                <label>Blood Group</label>
-                <input type="text" name="blood-group" value="">
-            </p>
-            <p>
-                <label>Gender</label>
-                <input type="text" name="gender" value="">
-            </p>
-            <p>
-                <label>Education</label>
-                <input type="text" name="education" value="">
-            </p>
-            <p class="message">
-                <label>Message</label>
-                <textarea name="message" rows="5"></textarea>
-            </p>
-        
-            <p class="submit-btn">
-               <span><button>Submit</button></span> 
-            </p>
-          </form>
-            
+            <h3 class="form-heading">
+                Create Form
+            </h3>
+            <form class="create-form">
+                <p>
+                    <label>First Name</label>
+                    <input type="text" name="first_name" value="">
+                </p>
+                <p>
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" value="">
+                </p>
+                <p>
+                    <label>Email Address</label>
+                    <input type="email" name="email_address" value="">
+                </p>
+                <p>
+                    <label>Telephone Number</label>
+                    <input type="number" name="telephone_number" value="">
+                </p>
+                <p>
+                    <label>Mobile Number</label>
+                    <input type="number" name="mobile_number" value="">
+                </p>
+                <p>
+                    <label>Address</label>
+                    <select class="address" name="address" multiple="multiple">
+
+                        <option value="AL">Alabama</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Ward No</label>
+                    <input type="number" name="ward-no" value="">
+                </p>
+                <p>
+                    <label>Tole</label>
+                    <input type="text" name="tole" value="">
+                </p>
+                <p>
+                    <label>Date of birth</label>
+                    <input type="date" name="date-of-birth" value="">
+                </p>
+                <p>
+                    <label>Blood Group</label>
+                    <select name="blood-group">
+                        <option selected disabled>Select blood-group..</option>
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Gender</label>
+                    <select name="gender">
+                        <option selected disabled>Select gender..</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Others</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Education</label>
+                    <input type="text" name="education" value="">
+                </p>
+                <p>
+                    <label>Message</label>
+                    <textarea name="message" rows="5"></textarea>
+                </p>
+
+                <p>
+                    <label>Image</label>
+                    <input type="file" id="file-selector" multiple>
+                </p>
+                <!-- <p>
+                    <label>Image Preview</label>
+                    <input type="file" id="file-selector" accept=".jpg, .jpeg, .png">
+                </p> -->
+
+                <p class="submit-btn">
+                    <span><button>Submit</button></span>
+                </p>
+            </form>
+
         </div>
     </div>
-  </body>
-  
+</body>
+
 
 </html>
 <script>
@@ -137,4 +170,33 @@
     $('.dropdown-toggle').click(function () {
         $(this).next('.dropdown-content').toggle();
     });
+</script>
+<script>
+    $(document).ready(function () {
+        $('.address').select2({
+            placeholder: "Select a address.."
+        });
+    });
+</script>
+<script>
+    const fileSelector = document.getElementById('file-selector');
+    fileSelector.addEventListener('change', (event) => {
+        const fileList = event.target.files;
+        console.log(fileList);
+    });
+</script>
+<script>
+    // function readImage(file) {
+    //     // Check if the file is an image.
+    //     if (file.type && !file.type.startsWith('image/')) {
+    //         console.log('File is not an image.', file.type, file);
+    //         return;
+    //     }
+
+    //     const reader = new FileReader();
+    //     reader.addEventListener('load', (event) => {
+    //         img.src = event.target.result;
+    //     });
+    //     reader.readAsDataURL(file);
+    // }
 </script>

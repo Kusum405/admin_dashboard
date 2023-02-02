@@ -10,173 +10,183 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <div class="side-menu">
-      <div class="brand-name">
-          <h5>Brand</h5>
-      </div>
-      <ul class="sidebar-links">
-          <li><a  href="main.html"><i class="fa-solid fa-gauge"></i><span>Dashboard</span></a></li>
-          <li><div class="dropdown">
-            <span class="dropdown-toggle"><i class="fa-solid fa-plus"></i>Setups <i class="fa fa-caret-down dropdown-arrow"></i></span>
-            <div class="dropdown-content">
-              <a href="form.html">Create</a>
-              <a href="list.html">List</a>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h5>Brand</h5>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="main.html"><i class="fa-solid fa-gauge"></i><span>Dashboard</span></a></li>
+            <li>
+                <div class="dropdown">
+                    <span class="dropdown-toggle"><i class="fa-solid fa-plus"></i>Setups <i
+                            class="fa fa-caret-down dropdown-arrow"></i></span>
+                    <div class="dropdown-content">
+                        <a href="form.html">Create</a>
+                        <a href="list.html">List</a>
+                    </div>
+                </div>
+            </li>
+            <li><i class="fa-sharp fa-solid fa-users"></i><span>Clients</span> </li>
+            <li><i class="fa-solid fa-users"></i><span>Users</span> </li>
+            <li><i class="fa-solid fa-money-check-dollar"></i><span>Income</span> </li>
+            <li><i class="fa-regular fa-circle-question"></i><span>Help</span></li>
+            <li><i class="fa-solid fa-gear"></i><span>Settings</span> </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="user">
+                    <a href="#" class="add-new-btn">Add New <i class="fa-solid fa-plus"></i></a>
+                    <i class="fa-sharp fa-solid fa-bell notification"></i>
+                    <div class="img-case">
+                        <img class="user-image" src="./resources/uploads/officer.jpg" alt="">
+                    </div>
+                </div>
             </div>
-          </div>
-          </li>
-          <li><i class="fa-solid fa-gauge"></i><span>Teachers</span> </li>
-          <li><i class="fa-solid fa-gauge"></i><span>Schools</span> </li>
-          <li><i class="fa-solid fa-gauge"></i><span>Income</span> </li>
-          <li><i class="fa-regular fa-circle-question"></i><span>Help</span></li>
-          <li><i class="fa-solid fa-gear"></i><span>Settings</span> </li>
-      </ul>
-  </div>
-  <div class="container">
-      <div class="header">
-          <div class="nav">
-              <div class="search">
-                  <input type="text" placeholder="Search..">
-                  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-              </div>
-              <div class="user">
-                  <a href="#" class="add-new-btn">Add New <i class="fa-solid fa-plus"></i></a>
-                  <i class="fa-sharp fa-solid fa-bell notification"></i>
-                  <div class="img-case">
-                    <img class="user-image" src="./resources/uploads/officer.jpg" alt="">
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="content">
-          <div class="cards">
-              <div class="card">
-                  <div class="box">
-                      <h1>2194</h1>
-                      <h3>Students</h3>
-                  </div>
-                  <div class="icon-case">
-                    <i class="fa-solid fa-users"></i>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="box">
-                      <h1>53</h1>
-                      <h3>Teachers</h3>
-                  </div>
-                  <div class="icon-case">
-                    <i class="fa-sharp fa-solid fa-users"></i>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="box">
-                      <h1>5</h1>
-                      <h3>Schools</h3>
-                  </div>
-                  <div class="icon-case">
-                    <i class="fa-solid fa-house"></i>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="box">
-                      <h1>350000</h1>
-                      <h3>Income</h3>
-                  </div>
-                  <div class="icon-case">
-                    <i class="fa-solid fa-money-check-dollar"></i>
-                  </div>
-              </div>
-          </div>
-          <div class="content-2">
-              <div class="recent-payments">
-                  <div class="title">
-                      <h2>Recent Payments</h2>
-                      <a href="#" class="viewall-btn">View All</a>
-                  </div>
-                  <table class="dash-table">
-                      <tr>
-                          <th>Name</th>
-                          <th>School</th>
-                          <th>Amount</th>
-                          <th>Option</th>
-                      </tr>
-                      <tr>
-                        <td>Meera Kc</td>
-                        <td>Lumbini Engineering College</td>
-                        <td>Rs 20000</td>
-                        <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash"></i></td>
-                      </tr>
-                      <tr>
-                        <td>Meera Kc</td>
-                        <td>Lumbini Engineering College</td>
-                        <td>Rs 20000</td>
-                        <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash"></i></td>
-                      </tr>
-                      <tr>
-                        <td>Meera Kc</td>
-                        <td>Lumbini Engineering College</td>
-                        <td>Rs 20000</td>
-                        <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash"></i></td>
-                      </tr>
-                      <tr>
-                        <td>Meera Kc</td>
-                        <td>Lumbini Engineering College</td>
-                        <td>Rs 20000</td>
-                        <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash"></i></td>
-                      </tr>
-                      <tr>
-                        <td>Meera Kc</td>
-                        <td>Lumbini Engineering College</td>
-                        <td>Rs 20000</td>
-                        <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash"></i></td>
-                      </tr>
-                      <tr>
-                        <td>Meera Kc</td>
-                        <td>Lumbini Engineering College</td>
-                        <td>Rs 20000</td>
-                        <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash"></i></td>
-                      </tr>
-                  </table>
-              </div>
-              <div class="new-students">
-                  <div class="title">
-                      <h2>New Students</h2>
-                      <a href="#" class="viewall-btn">View All</a>
-                  </div>
-                  <table class="dash-table">
-                      <tr>
-                          <th>Profile</th>
-                          <th>Name</th>
-                          <th>option</th>
-                      </tr>
-                      <tr>
-                          <td><img src="./resources/uploads/officer.jpg" alt=""></td>
-                          <td>Abc Xettri</td>
-                          <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i></td>
-                      </tr>
-                      <tr>
-                        <td><img src="./resources/uploads/officer.jpg" alt=""></td>
-                        <td>Abc Xettri</td>
-                        <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i></td>
-                      </tr>
-                      <tr>
-                        <td><img src="./resources/uploads/officer.jpg" alt=""></td>
-                        <td>Abc Xettri</td>
-                        <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i></td>
-                      </tr>
-                      <tr>
-                        <td><img src="./resources/uploads/officer.jpg" alt=""></td>
-                        <td>Abc Xettri</td>
-                        <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i></td>
-                      </tr>
-                  </table>
-              </div>
-          </div>
-      </div>
-  </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>Users</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>53</h1>
+                        <h3>Clients</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-sharp fa-solid fa-users"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>5</h1>
+                        <h3>Offices</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>350000</h1>
+                        <h3>Income</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Recent Payments</h2>
+                        <a href="#" class="viewall-btn">View All</a>
+                    </div>
+                    <table class="dash-table">
+                        <tr>
+                            <th>Name</th>
+                            <th>School</th>
+                            <th>Amount</th>
+                            <th>Option</th>
+                        </tr>
+                        <tr>
+                            <td>Meera Kc</td>
+                            <td>Lumbini Engineering College</td>
+                            <td>Rs 20000</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i
+                                    class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Meera Kc</td>
+                            <td>Lumbini Engineering College</td>
+                            <td>Rs 20000</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i
+                                    class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Meera Kc</td>
+                            <td>Lumbini Engineering College</td>
+                            <td>Rs 20000</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i
+                                    class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Meera Kc</td>
+                            <td>Lumbini Engineering College</td>
+                            <td>Rs 20000</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i
+                                    class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Meera Kc</td>
+                            <td>Lumbini Engineering College</td>
+                            <td>Rs 20000</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i
+                                    class="fa-solid fa-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Meera Kc</td>
+                            <td>Lumbini Engineering College</td>
+                            <td>Rs 20000</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i> <i
+                                    class="fa-solid fa-trash"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="new-students">
+                    <div class="title">
+                        <h2>New Users</h2>
+                        <a href="#" class="viewall-btn">View All</a>
+                    </div>
+                    <table class="dash-table">
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>option</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./resources/uploads/officer.jpg" alt=""></td>
+                            <td>Abc Xettri</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./resources/uploads/officer.jpg" alt=""></td>
+                            <td>Abc Xettri</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./resources/uploads/officer.jpg" alt=""></td>
+                            <td>Abc Xettri</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./resources/uploads/officer.jpg" alt=""></td>
+                            <td>Abc Xettri</td>
+                            <td><i class="fa-sharp fa-solid fa-eye"></i> <i class="fa-solid fa-pen-to-square"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
